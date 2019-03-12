@@ -1,7 +1,3 @@
-require 'HTTParty'
-require 'active_support/all'
-require 'xinrenxinshi/util'
-
 module Xinrenxinshi
   class Department
     include HTTParty

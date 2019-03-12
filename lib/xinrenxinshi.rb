@@ -1,6 +1,9 @@
+require 'httparty'
+require 'active_support/all'
 require "xinrenxinshi/version"
 require "xinrenxinshi/department"
 require "xinrenxinshi/employee"
+require 'xinrenxinshi/util'
 
 module Xinrenxinshi
   class Client
