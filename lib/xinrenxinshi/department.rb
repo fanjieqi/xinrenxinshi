@@ -1,7 +1,6 @@
 require 'HTTParty'
 require 'active_support/all'
-require 'base64'
-require 'hmac-sha1'
+require 'xinrenxinshi/util'
 
 module Xinrenxinshi
   class Department
@@ -20,18 +19,11 @@ module Xinrenxinshi
         timestamp: Time.now.to_i * 1000,
         fetchChild: 1,
       }
-      sign = hmacsha1(options.to_query)
+      sign = Util.hmacsha1(@app_secret, options.to_query)
       queryString = options.merge(sign: sign).to_query
 
       self.class.get("/department/list?#{queryString}").parsed_response
     end
-
-    private
-      def hmacsha1(data)
-        hmac = HMAC::SHA1.new(@app_secret)
-        hmac.update(data)
-        Base64.encode64(hmac.digest).strip
-      end
 
   end
 end
