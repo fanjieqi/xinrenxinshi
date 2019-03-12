@@ -9,7 +9,7 @@ TODO: Delete this and the text above, and describe your gem
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'xinrenxinshi'
+gem 'xinrenxinshi', git: 'git@git.tap4fun.com:bi-web/xinrenxinshi.git'
 ```
 
 And then execute:
@@ -18,7 +18,8 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install xinrenxinshi
+    $ gem install specific_install
+    $ gem specific_install git@git.tap4fun.com:bi-web/xinrenxinshi.git
 
 ## Usage
 
