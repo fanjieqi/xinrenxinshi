@@ -5,7 +5,7 @@ require 'xinrenxinshi/util'
 module Xinrenxinshi
   class Department
     include HTTParty
-    base_uri "https://api.xinrenxinshi.com/v3"
+    base_uri "https://api.xinrenxinshi.com/v2"
 
     def initialize(app_key, app_secret, uuid = nil)
       @app_key = app_key
@@ -22,7 +22,7 @@ module Xinrenxinshi
       sign = Util.hmacsha1(@app_secret, options.to_query)
       queryString = options.merge(sign: sign).to_query
 
-      self.class.get("/department/list?#{queryString}").parsed_response
+      self.class.get("/company/getDepartmentList?#{queryString}").parsed_response
     end
 
   end
