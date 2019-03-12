@@ -22,7 +22,15 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+  client = Xinrenxinshi::Client.new(app_key, app_secret)
+
+  departments = client.get_departments
+
+  employees = client.get_employees
+
+  employee = client.get_employee(id)
+```
 
 ## Development
 
