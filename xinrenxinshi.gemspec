@@ -38,5 +38,5 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency 'httparty', '~> 0.16.4'
   spec.add_dependency 'ruby-hmac', '~> 0.4.0'
-  spec.add_dependency "activesupport", "4.2.0"
+  spec.add_dependency "activesupport", "5.0.7.1"
 end
